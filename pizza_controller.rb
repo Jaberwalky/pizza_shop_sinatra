@@ -35,6 +35,19 @@ post '/pizzas' do
 end
 # --------------------------------------
 
+# EDIT - UPDATE
+get '/pizzas/:id/edit' do
+  @pizza = Pizza.find( params[:id] )
+  erb(:edit)
+end
+
+# UPDATE - UPDATE
+post '/pizzas/:id' do
+  @pizza = Pizza.new( params )
+  @pizza.update()
+  redirect ('/pizzas')
+end
+
 # SHOW - READ
 get '/pizzas/:id' do
   @pizza = Pizza.find( params[:id] )
@@ -48,7 +61,10 @@ post '/pizzas/:id/delete' do
   redirect ('/pizzas')
 end
 
-
+# /photos/:id/edit - GET - edit - UPDATE
+# /photos/:id = PATCH/PUT - update - UPDATE
+# GET /pizzas/:id/edit  edit
+# POST  /pizzas/:id update
 
 
 

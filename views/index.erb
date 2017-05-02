@@ -1,15 +1,14 @@
-
 <table>
   <tr>
     <th>Name</th>
     <th>Order</th>
-    <th>Order Details</th>
+    <th></th>
   </tr>
   <% @pizzas.each do |pizza|   %>
   <tr>
     <td><%= pizza.pretty_name() %></td>
     <td><%= pizza.quantity %> x <%= pizza.topping %></td>
-    <td><a href="/pizzas/<%=pizza.id%>">Click Here</a></td>
+    <td><a href="/pizzas/<%=pizza.id%>">View Order</a></td>
   </tr>
   <%end%>
 
