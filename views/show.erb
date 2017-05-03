@@ -2,6 +2,6 @@
 <p> Order: <%= @pizza.quantity %> x <%= @pizza.topping %> </p>
 <p> Price: £<%= @pizza.total %> </p>
 <form action="/pizzas/<%=@pizza.id%>/delete" method="POST">
-<input type="button" value="Delete">
+<input type="submit" value="Delete">
 </form>
 <a href="/pizzas/<%=@pizza.id%>/edit"><input type="button" value="Edit"></a>

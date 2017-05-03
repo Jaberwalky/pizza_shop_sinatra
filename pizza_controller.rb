@@ -56,15 +56,12 @@ end
 
 # DELETE - DELETE
 post '/pizzas/:id/delete' do
-  @pizza = Pizza.find( params[:id])
+  @pizza = Pizza.find( params[:id] )
   @pizza.delete()
   redirect ('/pizzas')
 end
 
-# /photos/:id/edit - GET - edit - UPDATE
-# /photos/:id = PATCH/PUT - update - UPDATE
-# GET /pizzas/:id/edit  edit
-# POST  /pizzas/:id update
+
 
 
 
